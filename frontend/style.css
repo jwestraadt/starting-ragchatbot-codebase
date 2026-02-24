@@ -241,7 +241,55 @@ header h1 {
 }
 
 .sources-content {
-    padding: 0 0.5rem 0.25rem 1.5rem;
+    padding: 0.25rem 0.5rem 0.25rem 1.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+
+.sources-content a,
+.sources-content span {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    line-height: 1.4;
+    white-space: nowrap;
+}
+
+.sources-content a {
+    background: rgba(96, 165, 250, 0.12);
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    color: #60a5fa;
+    text-decoration: none;
+    gap: 0.25rem;
+}
+
+.sources-content a::after {
+    content: '↗';
+    font-size: 0.65rem;
+    opacity: 0.7;
+}
+
+.sources-content a:visited {
+    background: rgba(167, 139, 250, 0.12);
+    border: 1px solid rgba(167, 139, 250, 0.3);
+    color: #a78bfa;
+}
+
+.sources-content a:hover {
+    background: rgba(96, 165, 250, 0.22);
+    border-color: rgba(96, 165, 250, 0.55);
+    color: #93c5fd;
+    text-decoration: none;
+}
+
+.sources-content span {
+    background: rgba(148, 163, 184, 0.1);
+    border: 1px solid rgba(148, 163, 184, 0.2);
     color: var(--text-secondary);
 }
 
@@ -475,6 +523,34 @@ header h1 {
 .stats-header::-webkit-details-marker,
 .suggested-header::-webkit-details-marker {
     display: none;
+}
+
+/* New Chat Button */
+.new-chat-btn {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: none;
+    border: none;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    width: 100%;
+    text-align: left;
+    transition: color 0.2s ease;
+}
+
+.new-chat-btn:hover {
+    color: var(--primary-color);
+}
+
+.new-chat-btn:focus {
+    outline: none;
+    color: var(--primary-color);
 }
 
 .stats-header::before,
