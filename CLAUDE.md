@@ -53,3 +53,19 @@ This is a RAG chatbot where Claude uses a **tool-calling loop** to search course
 - Model: `claude-sonnet-4-20250514`
 - Chunk size: 800 chars, overlap: 100 chars
 - Max search results: 5, max conversation history: 2 exchanges
+
+## Local Permissions (`.claude/settings.local.json`)
+
+```json
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude mcp list --verbose 2>&1 || claude mcp get playwright 2>&1)",
+      "Bash(claude mcp:*)",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_evaluate",
+      "mcp__playwright__browser_navigate"
+    ]
+  }
+}
+```
